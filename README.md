@@ -1,16 +1,10 @@
-# shinycssloaders 
-
-[![CRAN](http://www.r-pkg.org/badges/version/shinycssloaders)](https://cran.r-project.org/package=shinycssloaders)
-[![](https://cranlogs.r-pkg.org/badges/shinycssloaders)](https://CRAN.R-project.org/package=shinycssloaders)
-
-Add loader animations (spinners) to Shiny Outputs (e.g. plots, tables). Loading animations leverage on [Shiny JS events](https://shiny.rstudio.com/articles/js-events.html) and will show whilst the output value is not yet available or is 'out-of-date' (i.e. has been invalidated and the client hasn't received the new value). The spinners won't show if the output is not rendered (e.g. a `validate` or `req` is preventing it from being shown).
-
-![](https://cloud.githubusercontent.com/assets/15079591/26738969/69141f08-47d0-11e7-848a-9d1705b613f0.gif)
+# shinycssloaders
+Add loader animations (spinners) to Shiny Outputs (e.g. plots, tables) in an automated fashion. Loading animations leverage on [Shiny JS events](https://shiny.rstudio.com/articles/js-events.html) and will show whilst the output value is not yet available or is 'out-of-date' (i.e. has been invalidated and the client hasn't received the new value). The spinners won't show if the output is not rendered (e.g. a `validate` or `req` is preventing it from being shown).
 
 The advantages of using this package are:
 
 * Automatic spinner showing / hiding. Just add one extra R function call (see below) and your output will have the spinner showing at just the right times
-* Customizeable spinner color (for each output or globally)
+* Customizeable spinner colour (for each output or globally)
 * Customizeable spinner size (for each output or globally)
 * Choose from 8 different well-designed spinner types 
 
@@ -41,22 +35,22 @@ devtools::install_github('andrewsali/shinycssloaders')
 ```
 ## Demo
 
-To see how this works in action, you can check my example on [shinyapps.io](https://frontside.shinyapps.io/example/) or - in case my free shinyapps monthly allowance is over - run the example application from github directly:
+To see how this works in action, you can check my example on [shinyapps.io](https://frontside.shinyapps.io/example/) or run the example application from github directly:
 
 ```
-shiny::runGitHub('andrewsali/shinycssloaders', subdir = "inst/examples/basic")
+shiny::runGitHub('andrewsali/shinycssloaders',subdir="example")
 ```
 
 To see how the spinner works for outputs with undefined height, you can check out [this example](https://frontside.shinyapps.io/table/) or run it from github directly:
 
 ```
-shiny::runGitHub('andrewsali/shinycssloaders', subdir = "inst/examples/table")
+shiny::runGitHub('andrewsali/shinycssloaders',subdir="example/table")
 ```
 
 
-## Changing the spinner color
+## Changing the spinner colour
 
-You can specify a spinner color for each output or set a variable globally. 
+You can specify a spinner colour for each output or set a variable globally. 
 
 ### Locally for each output
 
@@ -68,7 +62,7 @@ plotOutput("my_plot") %>% withSpinner(color="#0dc5c1")
 
 ### Globally
 
-You can use `options(spinner.color="#0dc5c1")` to set the global color.
+You can use `options(spinner.color="#0dc5c1")` to set the global colour.
 
 ### Background color
 
